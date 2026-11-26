@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="neutral" data-scheme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Skin routine · Mom</title>
+<style>
+:root{--font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Inter,Arial,sans-serif}
+html[data-mode=day][data-scheme=light]{--bg:#FDFCF9;--sf:#fff;--cream:#F7F1E2;--tx:#1D1D1F;--mu:#7A756A;--ac:#C99A2E;--ac2:#6F9BCB;--ln:#EDE6D4;--grad:linear-gradient(180deg,#FFF7DF 0,#FDFCF9 260px)}
+html[data-mode=day][data-scheme=dark]{--bg:#17150F;--sf:#221F17;--cream:#2C281C;--tx:#F5EFE0;--mu:#A39B86;--ac:#E6C477;--ac2:#8FB4E0;--ln:#352F20;--grad:linear-gradient(180deg,#2E2813 0,#17150F 260px)}
+html[data-mode=night][data-scheme=light]{--bg:#E8E7F2;--sf:#F2F1FA;--cream:#DEDCEE;--tx:#2C2C48;--mu:#6F6E8C;--ac:#7B6CC4;--ac2:#A59BD8;--ln:#D3D1E6;--grad:linear-gradient(180deg,#DCD9F0 0,#E8E7F2 260px)}
+html[data-mode=night][data-scheme=dark]{--bg:#060A18;--sf:#0E1430;--cream:#161D40;--tx:#E8E6F7;--mu:#9591B8;--ac:#9D8CFF;--ac2:#B8A9E8;--ln:#1E2650;--grad:linear-gradient(180deg,#141A44 0,#060A18 260px)}
+html[data-mode=neutral][data-scheme=light]{--bg:#F2F2F7;--sf:#fff;--cream:#EAEAF0;--tx:#1C1C1E;--mu:#6E6E73;--ac:#4F6F95;--ac2:#8E8E93;--ln:#E0E0E6;--grad:none}
+html[data-mode=neutral][data-scheme=dark]{--bg:#111113;--sf:#1C1C1E;--cream:#2A2A2D;--tx:#F2F2F4;--mu:#98989F;--ac:#8FB0D6;--ac2:#8E8E93;--ln:#2E2E32;--grad:none}
+*{box-sizing:border-box;margin:0}
+html{background:var(--bg);transition:background .7s ease}
+body{font-family:var(--font);color:var(--tx);background:var(--grad) no-repeat var(--bg);min-height:100vh;transition:background-color .7s ease,color .7s ease;-webkit-font-smoothing:antialiased;padding:env(safe-area-inset-top) 0 calc(86px + env(safe-area-inset-bottom))}
+main{max-width:640px;margin:0 auto;padding:28px 20px}
+.view{animation:fade .5s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+h1{font-size:34px;font-weight:700;letter-spacing:-.02em;line-height:1.1}
+h2{font-size:20px;font-weight:600;margin:28px 0 10px}
+.sub{color:var(--mu);margin:6px 0 20px;font-size:16px}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.pill{border:1px solid var(--ln);background:var(--sf);color:var(--tx);border-radius:99px;padding:8px 14px;font:500 14px var(--font);cursor:pointer;transition:background .3s}
+.pill:hover{background:var(--cream)}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:18px;overflow:hidden;transition:background .7s,border-color .7s}
+.row{display:flex;gap:14px;align-items:flex-start;padding:15px 16px;border-bottom:1px solid var(--ln);cursor:pointer}
+.row:last-child{border:0}
+.chk{flex:none;width:24px;height:24px;border-radius:50%;border:2px solid var(--ac2);margin-top:1px;display:grid;place-items:center;transition:all .25s;color:transparent;font-size:14px}
+.done .chk{background:var(--ac);border-color:var(--ac);color:var(--bg)}
+.done .nm{text-decoration:line-through;opacity:.5}
+.nm{font-weight:600;font-size:16px}.hw{color:var(--mu);font-size:14px;margin-top:3px;line-height:1.4}
+.bar{height:6px;background:var(--cream);border-radius:9px;margin:0 0 18px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ac);border-radius:9px;transition:width .4s}
+.note{background:var(--cream);border-radius:14px;padding:12px 14px;font-size:14px;margin-bottom:14px;line-height:1.45}
+.tag{display:inline-block;font-size:12px;padding:2px 9px;border-radius:99px;background:var(--cream);color:var(--mu);margin-left:6px;font-weight:500;vertical-align:middle}
+.hi{background:var(--ac);color:var(--bg)}
+input,select{font:16px var(--font);background:var(--sf);color:var(--tx);border:1px solid var(--ln);border-radius:12px;padding:10px 12px}
+.add{display:flex;gap:8px;margin-top:12px}.add input{flex:1}
+.seg{display:flex;flex-wrap:wrap;gap:8px}.seg .pill.on{background:var(--ac);color:var(--bg);border-color:var(--ac)}
+.cust{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;margin-top:14px}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:11px 12px;border-bottom:1px solid var(--ln);text-align:left;vertical-align:top}th{color:var(--mu);font-weight:500}
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:center;gap:2px;padding:8px 8px calc(8px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--sf) 82%,transparent);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--ln);transition:background .7s}
+nav button{flex:1;max-width:100px;background:none;border:0;color:var(--mu);font:500 11px var(--font);padding:6px 2px;cursor:pointer;border-radius:10px}
+nav button span{display:block;font-size:22px;margin-bottom:2px}
+nav button.on{color:var(--ac)}
+button:focus-visible,input:focus-visible,select:focus-visible,.row:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<nav id="nav"></nav>
+<script>
+const D={"id": "mom", "name": "Mom", "title": "Skin routine · Mom", "day": [{"n": "CeraVe Hydrating Cleanser", "h": "Or a lukewarm rinse."}, {"n": "Eliza Jones Vitamin C", "h": "Gentle 5%, suits dry mature skin."}, {"n": "Hyaluronic Acid (Eliza Jones or The Ordinary)", "h": "Damp skin. Use one, not both."}, {"n": "Olay Regenerist Collagen Peptide 24", "h": "Moisturizer."}, {"n": "Face SPF 50", "h": "Biggest anti-wrinkle step. La Roche-Posay Anthelios or CeraVe AM SPF 30."}], "night": {"base": {"t": "Nourish night", "days": [], "steps": [{"n": "CeraVe Hydrating Cleanser", "h": ""}, {"n": "Hyaluronic Acid", "h": "On damp skin."}, {"n": "COSRX Advanced Snail 96 Mucin", "h": ""}, {"n": "La Beauté Éclat Cica night cream or CeraVe Moisturizing Cream", "h": "Rich ceramide cream."}, {"n": "Squalane (optional)", "h": "A few drops on top if skin feels tight."}], "note": ""}, "variants": [{"t": "Retinol night", "days": [1, 3, 5], "steps": [{"n": "CeraVe Hydrating Cleanser", "h": ""}, {"n": "Hyaluronic Acid", "h": "On damp skin."}, {"n": "Olay Retinol 24 Night Moisturiser", "h": "Skip exfoliating pads on these nights."}], "note": "If her skin is very sensitive, check with a doctor first."}, {"t": "Eye patch night", "days": [0], "steps": [{"n": "CeraVe Hydrating Cleanser", "h": ""}, {"n": "Betty's Hydrogel Eye Patches", "h": "10–15 minutes, then remove."}, {"n": "Hyaluronic Acid", "h": "On damp skin."}, {"n": "Snail essence and cica night cream", "h": ""}], "note": ""}]}, "monthly": [], "tips": ["SPF every morning is the most effective step against wrinkles.", "Use one hyaluronic acid at a time.", "Exfoliating pads once a week at most, never on retinol nights.", "Mature skin needs a rich ceramide cream more than extra actives."], "shop": [{"n": "Face SPF 50", "w": "Pharmaline (Anthelios or CeraVe AM SPF 30)", "why": "Replace SPF 20 and body sunscreen", "pr": "high"}, {"n": "CeraVe Moisturizing Cream or Cicaplast Baume B5+", "w": "Pharmaline", "why": "Rebuilds the barrier", "pr": "high"}, {"n": "The Ordinary 100% Plant-Derived Squalane", "w": "theordinary.com", "why": "Seals moisture on the driest nights", "pr": "medium"}, {"n": "The Ordinary Multi-Peptide Eye Serum", "w": "theordinary.com", "why": "Optional, for crepey eyelids", "pr": "low"}], "lib": [{"n": "CeraVe Hydrating Cleanser", "r": "Cleanser", "w": "Pharmaline"}, {"n": "Eliza Jones Vitamin C", "r": "Morning antioxidant", "w": "Eliza Jones"}, {"n": "Eliza Jones / The Ordinary Hyaluronic Acid", "r": "Hydration", "w": "Eliza Jones, The Ordinary"}, {"n": "COSRX Advanced Snail 96", "r": "Repair, hydration", "w": "Amazon"}, {"n": "Olay Collagen Peptide 24", "r": "Day moisturizer", "w": "Olay"}, {"n": "Olay Retinol 24", "r": "Night retinoid", "w": "Olay"}, {"n": "La Beauté Éclat Cica Boost", "r": "Night cream", "w": "Face Facts"}, {"n": "Betty's Eye Patches", "r": "Weekly eye hydration", "w": "Betty's"}]};
+const KEY="skin-"+D.id, DAYS=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+let S;
+try{S=JSON.parse(localStorage.getItem(KEY))}catch(e){}
+S=S||{};S.pref=S.pref||"auto";S.custom=S.custom||{day:"light",night:"dark",neutral:"light"};S.done=S.done||{};S.bought=S.bought||{};S.extra=S.extra||[];
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const VIEWS=[["day","☀️","Day"],["night","🌙","Night"],["plan","🗓️","Plan"],["shop","🛍️","Shop"],["lib","🧴","Products"],["set","⚙️","Settings"]];
+const modeOf=v=>v==="day"?"day":v==="night"?"night":"neutral";
+let view=location.hash.slice(1)||(new Date().getHours()>=17||new Date().getHours()<4?"night":"day");
+if(!VIEWS.some(v=>v[0]===view))view="day";
+const sysDark=()=>matchMedia("(prefers-color-scheme: dark)").matches;
+function scheme(m){if(S.pref==="light")return"light";if(S.pref==="dark")return"dark";if(S.pref==="custom")return S.custom[m];return sysDark()?"dark":"light"}
+const today=new Date(),dk=today.toISOString().slice(0,10),dow=today.getDay(),dom=today.getDate();
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function nightPlan(){const v=D.night.variants.find(x=>x.days.includes(dow));return v||D.night.base}
+function stepsFor(v){return v==="day"?{t:"Morning",steps:D.day}:nightPlan()}
+function go(v){view=v;location.hash=v;render(true)}
+function theme(){const h=document.documentElement,m=modeOf(view);h.dataset.mode=m;h.dataset.scheme=scheme(m);
+ document.querySelector('meta[name=theme-color]')||document.head.insertAdjacentHTML("beforeend",'<meta name="theme-color">');
+ document.querySelector('meta[name=theme-color]').content=getComputedStyle(h).getPropertyValue("--bg").trim()}
+function routine(v){
+ const p=stepsFor(v),ids=p.steps.map((_,i)=>dk+v+i),n=ids.filter(i=>S.done[i]).length;
+ const ban=D.monthly.filter(m=>dom>=m.from&&dom<=m.to).map(m=>`<div class="note"><b>${esc(m.t)}</b><br>${esc(m.n)}</div>`).join("");
+ return `<div class="top"><div><h1>${v==="day"?"Good morning":"Good evening"}</h1><p class="sub">${D.name} · ${DAYS[dow]}${v==="night"?` · <b>${esc(p.t)}</b>`:""}</p></div>
+ <button class="pill" data-tg>${scheme(modeOf(v))==="dark"?"☾ Dark":"☼ Light"}</button></div>
+ ${ban}${v==="night"&&p.note?`<div class="note">${esc(p.note)}</div>`:""}
+ <div class="bar"><i style="width:${n/ids.length*100}%"></i></div>
+ <div class="card">${p.steps.map((s,i)=>`<div class="row ${S.done[ids[i]]?"done":""}" tabindex="0" data-id="${ids[i]}"><div class="chk">✓</div><div><div class="nm">${esc(s.n)}</div><div class="hw">${esc(s.h)}</div></div></div>`).join("")}</div>
+ <p class="sub" style="margin-top:14px">${n} of ${ids.length} done today</p>`}
+function plan(){
+ const rows=DAYS.map((d,i)=>{const v=D.night.variants.find(x=>x.days.includes(i))||D.night.base;return`<tr><td><b>${d}</b>${i===dow?'<span class="tag hi">Today</span>':""}</td><td>${esc(v.t)}</td></tr>`}).join("");
+ return`<h1>Plan</h1><p class="sub">Your evening rotation and monthly treatments.</p><div class="card"><table><tr><th>Day</th><th>Evening</th></tr>${rows}</table></div>
+ ${D.monthly.length?`<h2>Monthly</h2><div class="card"><table>${D.monthly.map(m=>`<tr><td><b>${esc(m.t)}</b><br><span class="hw">Days ${m.from}–${m.to}</span></td><td>${esc(m.n)}</td></tr>`).join("")}</table></div>`:""}
+ <h2>Good to know</h2><div class="card"><table>${D.tips.map(t=>`<tr><td>${esc(t)}</td></tr>`).join("")}</table></div>`}
+function shop(){
+ const items=[...D.shop,...S.extra.map(n=>({n,w:"Added by you",why:"",pr:"custom"}))];
+ const order={high:0,medium:1,low:2,custom:3};items.sort((a,b)=>order[a.pr]-order[b.pr]);
+ return`<h1>Shopping list</h1><p class="sub">Tap to mark as bought. Compare prices before buying.</p>
+ <div class="card">${items.length?items.map(it=>`<div class="row ${S.bought[it.n]?"done":""}" tabindex="0" data-b="${esc(it.n)}"><div class="chk">✓</div><div><div class="nm">${esc(it.n)}${it.pr!=="custom"?`<span class="tag">${it.pr}</span>`:""}</div><div class="hw">${esc(it.w)}${it.why?" · "+esc(it.why):""}</div></div></div>`).join(""):`<div class="row"><div class="hw">Nothing needed right now. Add anything you run out of below.</div></div>`}</div>
+ <div class="add"><input id="newi" placeholder="Add an item" aria-label="Add an item"><button class="pill" id="addb">Add</button></div>`}
+function lib(){return`<h1>Products</h1><p class="sub">What ${D.name==="You"?"you use":"is in the routine"}, and why.</p><div class="card">${D.lib.map(p=>`<div class="row" style="cursor:default"><div><div class="nm">${esc(p.n)}</div><div class="hw">${esc(p.r)} · ${esc(p.w)}</div></div></div>`).join("")}</div>`}
+function settings(){
+ const o=(k,l)=>`<button class="pill ${S.pref===k?"on":""}" data-p="${k}">${l}</button>`;
+ const sel=m=>`<select data-c="${m}"><option value="light" ${S.custom[m]==="light"?"selected":""}>Light</option><option value="dark" ${S.custom[m]==="dark"?"selected":""}>Dark</option></select>`;
+ return`<h1>Settings</h1><p class="sub">Choose how the app looks.</p><h2>Appearance</h2>
+ <div class="seg">${o("auto","Automatic")}${o("light","Force light")}${o("dark","Force dark")}${o("custom","Custom")}</div>
+ <p class="hw" style="margin-top:10px">Automatic: day pages use the Day theme, night pages the Night theme, everything else Neutral. Light or dark follows your device.</p>
+ ${S.pref==="custom"?`<div class="card" style="padding:4px 16px;margin-top:14px"><div class="cust"><span>☀️ Day routine</span>${sel("day")}</div><div class="cust"><span>🌙 Night routine</span>${sel("night")}</div><div class="cust" style="margin-bottom:14px"><span>⚪ Everything else</span>${sel("neutral")}</div></div>`:""}
+ <h2>Data</h2><button class="pill" id="reset">Clear today's checks</button>
+ <p class="hw" style="margin-top:18px">Not medical advice. See a dermatologist if irritation persists.</p>`}
+function render(fade){
+ theme();
+ const v={day:()=>routine("day"),night:()=>routine("night"),plan,shop,lib,set:settings}[view]();
+ const app=document.getElementById("app");app.innerHTML=`<div class="view" ${fade?"":'style="animation:none"'}>${v}</div>`;
+ document.getElementById("nav").innerHTML=VIEWS.map(x=>`<button class="${x[0]===view?"on":""}" data-v="${x[0]}" aria-label="${x[2]}"><span>${x[1]}</span>${x[2]}</button>`).join("");
+}
+document.addEventListener("click",e=>{
+ const t=e.target.closest("[data-v],[data-id],[data-b],[data-p],[data-tg],#addb,#reset");if(!t)return;
+ if(t.dataset.v)return go(t.dataset.v);
+ if(t.dataset.id){S.done[t.dataset.id]=!S.done[t.dataset.id]}
+ else if(t.dataset.b){S.bought[t.dataset.b]=!S.bought[t.dataset.b]}
+ else if(t.dataset.p){S.pref=t.dataset.p}
+ else if(t.dataset.tg){const m=modeOf(view);S.custom[m]=scheme(m)==="dark"?"light":"dark";S.pref="custom"}
+ else if(t.id==="addb"){const i=document.getElementById("newi");if(i.value.trim())S.extra.push(i.value.trim())}
+ else if(t.id==="reset"){S.done={}}
+ save();render(false)});
+document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.classList.contains("row")){e.preventDefault();e.target.click()}});
+document.addEventListener("change",e=>{if(e.target.dataset.c){S.custom[e.target.dataset.c]=e.target.value;save();render(false)}});
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>render(false));
+window.addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(h!==view&&VIEWS.some(v=>v[0]===h)){view=h;render(true)}});
+render(false);
+</script>
+</body>
+</html>
