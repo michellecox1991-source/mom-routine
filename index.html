@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Skin routine · Mom</title>
+<title>Skin routine</title>
 <style>
 :root{--font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Inter,Arial,sans-serif}
 html[data-mode=day][data-scheme=light]{--bg:#FDFCF9;--sf:#fff;--cream:#F7F1E2;--tx:#1D1D1F;--mu:#7A756A;--ac:#C99A2E;--ac2:#6F9BCB;--ln:#EDE6D4;--grad:linear-gradient(180deg,#FFF7DF 0,#FDFCF9 260px)}
@@ -53,11 +53,11 @@ button:focus-visible,input:focus-visible,select:focus-visible,.row:focus-visible
 <main id="app"></main>
 <nav id="nav"></nav>
 <script>
-const D={"id": "mom", "name": "Mom", "title": "Skin routine · Mom", "day": [{"n": "CeraVe Hydrating Cleanser", "h": "Or a lukewarm rinse."}, {"n": "Eliza Jones Vitamin C", "h": "Gentle 5%, suits dry mature skin."}, {"n": "Hyaluronic Acid (Eliza Jones or The Ordinary)", "h": "Damp skin. Use one, not both."}, {"n": "Olay Regenerist Collagen Peptide 24", "h": "Moisturizer."}, {"n": "Face SPF 50", "h": "Biggest anti-wrinkle step. La Roche-Posay Anthelios or CeraVe AM SPF 30."}], "night": {"base": {"t": "Nourish night", "days": [], "steps": [{"n": "CeraVe Hydrating Cleanser", "h": ""}, {"n": "Hyaluronic Acid", "h": "On damp skin."}, {"n": "COSRX Advanced Snail 96 Mucin", "h": ""}, {"n": "La Beauté Éclat Cica night cream or CeraVe Moisturizing Cream", "h": "Rich ceramide cream."}, {"n": "Squalane (optional)", "h": "A few drops on top if skin feels tight."}], "note": ""}, "variants": [{"t": "Retinol night", "days": [1, 3, 5], "steps": [{"n": "CeraVe Hydrating Cleanser", "h": ""}, {"n": "Hyaluronic Acid", "h": "On damp skin."}, {"n": "Olay Retinol 24 Night Moisturiser", "h": "Skip exfoliating pads on these nights."}], "note": "If her skin is very sensitive, check with a doctor first."}, {"t": "Eye patch night", "days": [0], "steps": [{"n": "CeraVe Hydrating Cleanser", "h": ""}, {"n": "Betty's Hydrogel Eye Patches", "h": "10–15 minutes, then remove."}, {"n": "Hyaluronic Acid", "h": "On damp skin."}, {"n": "Snail essence and cica night cream", "h": ""}], "note": ""}]}, "monthly": [], "tips": ["SPF every morning is the most effective step against wrinkles.", "Use one hyaluronic acid at a time.", "Exfoliating pads once a week at most, never on retinol nights.", "Mature skin needs a rich ceramide cream more than extra actives."], "shop": [{"n": "Face SPF 50", "w": "Pharmaline (Anthelios or CeraVe AM SPF 30)", "why": "Replace SPF 20 and body sunscreen", "pr": "high"}, {"n": "CeraVe Moisturizing Cream or Cicaplast Baume B5+", "w": "Pharmaline", "why": "Rebuilds the barrier", "pr": "high"}, {"n": "The Ordinary 100% Plant-Derived Squalane", "w": "theordinary.com", "why": "Seals moisture on the driest nights", "pr": "medium"}, {"n": "The Ordinary Multi-Peptide Eye Serum", "w": "theordinary.com", "why": "Optional, for crepey eyelids", "pr": "low"}], "lib": [{"n": "CeraVe Hydrating Cleanser", "r": "Cleanser", "w": "Pharmaline"}, {"n": "Eliza Jones Vitamin C", "r": "Morning antioxidant", "w": "Eliza Jones"}, {"n": "Eliza Jones / The Ordinary Hyaluronic Acid", "r": "Hydration", "w": "Eliza Jones, The Ordinary"}, {"n": "COSRX Advanced Snail 96", "r": "Repair, hydration", "w": "Amazon"}, {"n": "Olay Collagen Peptide 24", "r": "Day moisturizer", "w": "Olay"}, {"n": "Olay Retinol 24", "r": "Night retinoid", "w": "Olay"}, {"n": "La Beauté Éclat Cica Boost", "r": "Night cream", "w": "Face Facts"}, {"n": "Betty's Eye Patches", "r": "Weekly eye hydration", "w": "Betty's"}]};
+const D={"id": "mom", "rules": {"retMax": 3}, "name": "", "title": "Skin routine", "day": [{"n": "CeraVe Hydrating Cleanser", "h": "Or a lukewarm rinse.", "u": ""}, {"n": "The Ordinary Ascorbyl Glucoside Solution 12%", "h": "Gentle vitamin C serum. Morning only, after cleansing.", "u": "Eliza Jones Super Booster Brightening (5% Liposomal Vitamin C) until it is finished."}, {"n": "The Ordinary Hyaluronic Acid 2% + B5 (with Ceramides)", "h": "On damp skin.", "u": "Eliza Jones Hyaluronic Acid Face & Neckline Serum until it is finished."}, {"n": "CeraVe Moisturizing Cream", "h": "Rich ceramide cream.", "u": "Olay Regenerist Collagen Peptide 24 Moisturiser until it is finished."}, {"n": "La Roche-Posay Anthelios UVMune 400 Hydrating Cream", "h": "Daily, about two finger-lengths for face and neck.", "u": ""}], "night": {"base": {"t": "Nourish night", "days": [], "steps": [{"n": "CeraVe Hydrating Cleanser", "h": "", "u": ""}, {"n": "The Ordinary Hyaluronic Acid 2% + B5 (with Ceramides)", "h": "On damp skin.", "u": "Eliza Jones Hyaluronic Acid Face & Neckline Serum until it is finished."}, {"n": "COSRX Advanced Snail 96 Mucin Power Essence", "h": "", "u": ""}, {"n": "CeraVe Moisturizing Cream", "h": "Your main night cream.", "u": "La Beauté Éclat Cica Boost Replenishing Night Cream until it is finished."}, {"n": "The Ordinary 100% Plant-Derived Squalane", "h": "Optional. A few drops on top if skin feels tight.", "u": ""}], "note": ""}, "variants": [{"t": "Retinol night", "days": [1, 3, 5], "steps": [{"n": "CeraVe Hydrating Cleanser", "h": "", "u": ""}, {"n": "The Ordinary Hyaluronic Acid 2% + B5 (with Ceramides)", "h": "On damp skin.", "u": "Eliza Jones Hyaluronic Acid Face & Neckline Serum until it is finished."}, {"n": "Olay Regenerist Retinol 24 Night Moisturiser", "h": "Skip exfoliating pads on these nights.", "u": ""}], "note": "If her skin is very sensitive, check with a doctor first.", "ret": true}, {"t": "Eye patch night", "days": [0], "steps": [{"n": "CeraVe Hydrating Cleanser", "h": "", "u": ""}, {"n": "Betty's Nature Hydrogel Eye Mask Patches + Aloe Vera", "h": "10 to 15 minutes, then remove.", "u": ""}, {"n": "The Ordinary Hyaluronic Acid 2% + B5 (with Ceramides)", "h": "On damp skin.", "u": "Eliza Jones Hyaluronic Acid Face & Neckline Serum until it is finished."}, {"n": "CeraVe Moisturizing Cream", "h": "Seal in.", "u": ""}], "note": "", "ret": false}]}, "monthly": [], "tips": ["Use one hyaluronic acid at a time.", "SPF every morning is the most effective step against wrinkles.", "Exfoliating pads once a week at most, never on retinol nights.", "Mature skin needs a rich ceramide cream more than extra actives."], "seed": ["The Ordinary Ascorbyl Glucoside Solution 12%", "The Ordinary Hyaluronic Acid 2% + B5 (with Ceramides)", "La Roche-Posay Anthelios UVMune 400 Hydrating Cream", "CeraVe Moisturizing Cream", "The Ordinary 100% Plant-Derived Squalane"], "cat": ["CeraVe Hydrating Cleanser", "The Ordinary Ascorbyl Glucoside Solution 12%", "The Ordinary Hyaluronic Acid 2% + B5 (with Ceramides)", "CeraVe Moisturizing Cream", "La Roche-Posay Anthelios UVMune 400 Hydrating Cream", "COSRX Advanced Snail 96 Mucin Power Essence", "Olay Regenerist Retinol 24 Night Moisturiser", "The Ordinary 100% Plant-Derived Squalane", "Betty's Nature Hydrogel Eye Mask Patches + Aloe Vera"], "lib": [{"n": "CeraVe Hydrating Cleanser", "r": "Cleanser", "w": "Pharmaline"}, {"n": "The Ordinary Ascorbyl Glucoside Solution 12%", "r": "Morning vitamin C", "w": "The Ordinary"}, {"n": "The Ordinary Hyaluronic Acid 2% + B5 (with Ceramides)", "r": "Hydration", "w": "The Ordinary"}, {"n": "CeraVe Moisturizing Cream", "r": "Moisturizer", "w": "Pharmaline"}, {"n": "La Roche-Posay Anthelios UVMune 400 Hydrating Cream", "r": "Sunscreen", "w": "Pharmaline"}, {"n": "COSRX Advanced Snail 96 Mucin Power Essence", "r": "Hydration, repair", "w": "Pharmaline"}, {"n": "Olay Regenerist Retinol 24 Night Moisturiser", "r": "Night retinoid", "w": "Pharmaline"}, {"n": "The Ordinary 100% Plant-Derived Squalane", "r": "Seals in moisture", "w": "The Ordinary"}, {"n": "Betty's Nature Hydrogel Eye Mask Patches + Aloe Vera", "r": "Weekly eye hydration", "w": "Pharmaline"}], "fade": [{"n": "Eliza Jones Super Booster Brightening (5% Liposomal Vitamin C)", "r": "Replaced by The Ordinary Ascorbyl Glucoside Solution 12%", "w": "Use until finished"}, {"n": "Eliza Jones Hyaluronic Acid Face & Neckline Serum", "r": "Replaced by The Ordinary Hyaluronic Acid 2% + B5 (with Ceramides)", "w": "Use until finished"}, {"n": "Olay Regenerist Collagen Peptide 24 Moisturiser", "r": "Replaced by CeraVe Moisturizing Cream", "w": "Use until finished"}, {"n": "La Beauté Éclat Cica Boost Replenishing Night Cream", "r": "Replaced by CeraVe Moisturizing Cream", "w": "Use until finished"}, {"n": "Miracle Water Micellar Face Cleansing Water", "r": "Not needed, CeraVe Hydrating Cleanser is enough", "w": "Use until finished"}, {"n": "Exfoliating toner pads", "r": "Once a week at most", "w": "Use until finished"}, {"n": "Botanical Care Nourishing & Moisturising Day & Night Cream", "r": "Hands and body", "w": "Use until finished"}]};
 const KEY="skin-"+D.id, DAYS=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 let S;
 try{S=JSON.parse(localStorage.getItem(KEY))}catch(e){}
-S=S||{};S.pref=S.pref||"auto";S.custom=S.custom||{day:"light",night:"dark",neutral:"light"};S.done=S.done||{};S.bought=S.bought||{};S.extra=S.extra||[];
+S=S||{};S.pref=S.pref||"auto";S.custom=S.custom||{day:"light",night:"dark",neutral:"light"};S.done=S.done||{};S.list=S.list||(D.seed||[]).map(n=>({n,b:0}));
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
 const VIEWS=[["day","☀️","Day"],["night","🌙","Night"],["plan","🗓️","Plan"],["shop","🛍️","Shop"],["lib","🧴","Products"],["set","⚙️","Settings"]];
 const modeOf=v=>v==="day"?"day":v==="night"?"night":"neutral";
@@ -67,7 +67,24 @@ const sysDark=()=>matchMedia("(prefers-color-scheme: dark)").matches;
 function scheme(m){if(S.pref==="light")return"light";if(S.pref==="dark")return"dark";if(S.pref==="custom")return S.custom[m];return sysDark()?"dark":"light"}
 const today=new Date(),dk=today.toISOString().slice(0,10),dow=today.getDay(),dom=today.getDate();
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-function nightPlan(){const v=D.night.variants.find(x=>x.days.includes(dow));return v||D.night.base}
+const planDefault=()=>[0,1,2,3,4,5,6].map(i=>D.night.variants.findIndex(v=>v.days.includes(i)));
+const getPlan=()=>S.plan&&S.plan.length===7?S.plan:planDefault();
+const variantOf=k=>k<0?D.night.base:D.night.variants[k];
+const isRet=k=>k>=0&&!!D.night.variants[k].ret;
+let pend=null;
+function nightPlan(){return variantOf(getPlan()[dow])}
+function validate(p){const is=[],r=p.map((k,i)=>isRet(k)?i:-1).filter(i=>i>=0);
+ if(r.length>D.rules.retMax)is.push(`${r.length} retinoid nights is more than the ${D.rules.retMax} a week this routine allows.`);
+ if(r.length<7)r.forEach(i=>{const j=(i+1)%7;if(isRet(p[j]))is.push(`${DAYS[i]} and ${DAYS[j]} are back-to-back retinoid nights. Skin needs a night off in between.`)});
+ return is}
+function fixPlan(p,ch){const q=[...p],notes=[],ret=()=>q.map((k,i)=>isRet(k)?i:-1).filter(i=>i>=0);
+ while(ret().length>D.rules.retMax){const r=ret().filter(i=>i!==ch),i=r[r.length-1];notes.push(`${DAYS[i]}: ${variantOf(q[i]).t} becomes ${D.night.base.t}.`);q[i]=-1}
+ for(let g=0;g<7;g++){const bad=ret().find(i=>isRet(q[(i+1)%7]));if(bad===undefined)break;
+  const nx=(bad+1)%7,mv=bad===ch?nx:nx===ch?bad:nx;
+  const c=[0,1,2,3,4,5,6].filter(e=>e!==mv&&!isRet(q[e])&&[(e+6)%7,(e+1)%7].every(n=>n===mv||!isRet(q[n]))).sort((a,b)=>{const d=x=>Math.min(Math.abs(x-mv),7-Math.abs(x-mv));return d(a)-d(b)});
+  if(!c.length)return null;const e=c[0];
+  notes.push(`${DAYS[mv]} ${variantOf(q[mv]).t.toLowerCase()} moves to ${DAYS[e]}. ${DAYS[e]} gets ${variantOf(q[e]).t.toLowerCase()} on ${DAYS[mv]}.`);[q[mv],q[e]]=[q[e],q[mv]]}
+ return validate(q).length?null:{plan:q,notes}}
 function stepsFor(v){return v==="day"?{t:"Morning",steps:D.day}:nightPlan()}
 function go(v){view=v;location.hash=v;render(true)}
 function theme(){const h=document.documentElement,m=modeOf(view);h.dataset.mode=m;h.dataset.scheme=scheme(m);
@@ -76,24 +93,37 @@ function theme(){const h=document.documentElement,m=modeOf(view);h.dataset.mode=
 function routine(v){
  const p=stepsFor(v),ids=p.steps.map((_,i)=>dk+v+i),n=ids.filter(i=>S.done[i]).length;
  const ban=D.monthly.filter(m=>dom>=m.from&&dom<=m.to).map(m=>`<div class="note"><b>${esc(m.t)}</b><br>${esc(m.n)}</div>`).join("");
- return `<div class="top"><div><h1>${v==="day"?"Good morning":"Good evening"}</h1><p class="sub">${D.name} · ${DAYS[dow]}${v==="night"?` · <b>${esc(p.t)}</b>`:""}</p></div>
+ return `<div class="top"><div><h1>${v==="day"?"Good morning":"Good evening"}</h1><p class="sub">${DAYS[dow]}${v==="night"?` · <b>${esc(p.t)}</b>`:""}</p></div>
  <button class="pill" data-tg>${scheme(modeOf(v))==="dark"?"☾ Dark":"☼ Light"}</button></div>
  ${ban}${v==="night"&&p.note?`<div class="note">${esc(p.note)}</div>`:""}
  <div class="bar"><i style="width:${n/ids.length*100}%"></i></div>
- <div class="card">${p.steps.map((s,i)=>`<div class="row ${S.done[ids[i]]?"done":""}" tabindex="0" data-id="${ids[i]}"><div class="chk">✓</div><div><div class="nm">${esc(s.n)}</div><div class="hw">${esc(s.h)}</div></div></div>`).join("")}</div>
- <p class="sub" style="margin-top:14px">${n} of ${ids.length} done today</p>`}
+ <div class="card">${p.steps.map((s,i)=>`<div class="row ${S.done[ids[i]]?"done":""}" tabindex="0" data-id="${ids[i]}"><div class="chk">✓</div><div><div class="nm">${esc(s.n)}</div><div class="hw">${esc(s.h)}</div>${s.u?`<div class="hw" style="color:var(--ac);font-weight:500">Can be used for now: ${esc(s.u)}</div>`:""}</div></div>`).join("")}</div>
+ <p class="sub" style="margin-top:14px">${n} of ${ids.length} done today</p>${v==="day"&&D.body?bodyCard():""}`}
+function bodyCard(){return`<h2>Body, when needed</h2><p class="hw" style="margin:-4px 0 10px">For breakouts on back and chest. Use on shower days.</p><div class="card">${D.body.map((s,i)=>{const id=dk+"body"+i;return`<div class="row ${S.done[id]?"done":""}" tabindex="0" data-id="${id}"><div class="chk">✓</div><div><div class="nm">${esc(s.n)}</div><div class="hw">${esc(s.h)}</div></div></div>`}).join("")}</div>`}
 function plan(){
- const rows=DAYS.map((d,i)=>{const v=D.night.variants.find(x=>x.days.includes(i))||D.night.base;return`<tr><td><b>${d}</b>${i===dow?'<span class="tag hi">Today</span>':""}</td><td>${esc(v.t)}</td></tr>`}).join("");
- return`<h1>Plan</h1><p class="sub">Your evening rotation and monthly treatments.</p><div class="card"><table><tr><th>Day</th><th>Evening</th></tr>${rows}</table></div>
+ const cur=pend?pend.plan:getPlan(),opts=k=>[-1,...D.night.variants.map((_,i)=>i)].map(i=>`<option value="${i}" ${i===k?"selected":""}>${esc(variantOf(i).t)}</option>`).join("");
+ const rows=DAYS.map((d,i)=>`<tr><td><b>${d}</b>${i===dow?'<span class="tag hi">Today</span>':""}</td><td><select data-d="${i}" aria-label="Evening on ${d}" style="width:100%">${opts(cur[i])}</select></td></tr>`).join("");
+ const pn=pend?`<div class="note"><b>This change needs a small update</b><br>${pend.issues.map(esc).join("<br>")}<br><br>${pend.fx?"<b>Suggested:</b> "+pend.fx.notes.map(esc).join(" "):"No automatic fix is possible. Change another day first."}</div><div class="seg" style="margin-bottom:16px">${pend.fx?'<button class="pill on" data-pa>Apply suggested fix</button>':""}<button class="pill" data-pk>Keep my change</button><button class="pill" data-pc>Cancel</button></div>`:"";
+ return`<h1>Plan</h1><p class="sub">Choose what happens on each evening. The app checks your change and suggests updates if needed.</p>${pn}<div class="card"><table><tr><th>Day</th><th>Evening</th></tr>${rows}</table></div>
+ ${S.plan?'<p style="margin-top:12px"><button class="pill" data-prs>Reset to the original plan</button></p>':""}
  ${D.monthly.length?`<h2>Monthly</h2><div class="card"><table>${D.monthly.map(m=>`<tr><td><b>${esc(m.t)}</b><br><span class="hw">Days ${m.from}–${m.to}</span></td><td>${esc(m.n)}</td></tr>`).join("")}</table></div>`:""}
  <h2>Good to know</h2><div class="card"><table>${D.tips.map(t=>`<tr><td>${esc(t)}</td></tr>`).join("")}</table></div>`}
+const STORES={pharma:"Pharmaline",ordinary:"The Ordinary & NIOD"};
+const store=n=>/ordinary|niod/i.test(n)?"ordinary":"pharma";
 function shop(){
- const items=[...D.shop,...S.extra.map(n=>({n,w:"Added by you",why:"",pr:"custom"}))];
- const order={high:0,medium:1,low:2,custom:3};items.sort((a,b)=>order[a.pr]-order[b.pr]);
- return`<h1>Shopping list</h1><p class="sub">Tap to mark as bought. Compare prices before buying.</p>
- <div class="card">${items.length?items.map(it=>`<div class="row ${S.bought[it.n]?"done":""}" tabindex="0" data-b="${esc(it.n)}"><div class="chk">✓</div><div><div class="nm">${esc(it.n)}${it.pr!=="custom"?`<span class="tag">${it.pr}</span>`:""}</div><div class="hw">${esc(it.w)}${it.why?" · "+esc(it.why):""}</div></div></div>`).join(""):`<div class="row"><div class="hw">Nothing needed right now. Add anything you run out of below.</div></div>`}</div>
- <div class="add"><input id="newi" placeholder="Add an item" aria-label="Add an item"><button class="pill" id="addb">Add</button></div>`}
-function lib(){return`<h1>Products</h1><p class="sub">What ${D.name==="You"?"you use":"is in the routine"}, and why.</p><div class="card">${D.lib.map(p=>`<div class="row" style="cursor:default"><div><div class="nm">${esc(p.n)}</div><div class="hw">${esc(p.r)} · ${esc(p.w)}</div></div></div>`).join("")}</div>`}
+ const on=new Set(S.list.map(x=>x.n)),anyB=S.list.some(x=>x.b);
+ const listG=["pharma","ordinary"].map(k=>{const its=S.list.map((x,i)=>({...x,i})).filter(x=>store(x.n)===k);
+  return its.length?`<h2>${STORES[k]}</h2><div class="card">${its.map(it=>`<div class="row ${it.b?"done":""}" tabindex="0" data-b="${it.i}"><div class="chk">✓</div><div class="nm" style="flex:1">${esc(it.n)}</div><button class="pill" data-r="${it.i}" aria-label="Remove ${esc(it.n)}">Remove</button></div>`).join("")}</div>`:""}).join("");
+ const addG=["pharma","ordinary"].map(k=>{const its=D.cat.filter(n=>store(n)===k);
+  return`<p class="hw" style="margin:16px 4px 6px"><b>${STORES[k]}</b></p><div class="card">${its.map(n=>`<div class="row" style="cursor:default;align-items:center"><div class="nm" style="flex:1">${esc(n)}</div>${on.has(n)?'<span class="tag">On list</span>':`<button class="pill" data-a="${esc(n)}">Add</button>`}</div>`).join("")}</div>`}).join("");
+ return`<h1>Shopping list</h1><p class="sub">Tap an item when you've bought it, then remove it.</p>
+ ${S.list.length?listG:`<div class="card"><div class="row" style="cursor:default"><div class="hw">Your list is empty. Add products below.</div></div></div>`}
+ ${anyB?`<p style="margin-top:14px"><button class="pill" data-clr>Remove all bought items</button></p>`:""}
+ <h2>Add from your products</h2>${addG}
+ <h2>Something else</h2><div class="add"><input id="newi" placeholder="Product name" aria-label="Product name"><button class="pill" id="addb">Add</button></div>
+ <p class="hw" style="margin-top:8px">Names with The Ordinary or NIOD are listed under The Ordinary & NIOD. Everything else goes under Pharmaline.</p>`}
+function lib(){const card=a=>`<div class="card">${a.map(p=>`<div class="row" style="cursor:default"><div><div class="nm">${esc(p.n)}</div><div class="hw">${esc(p.r)} · ${esc(p.w)}</div></div></div>`).join("")}</div>`;
+ return`<h1>Products</h1><p class="sub">Everything in the routine, and where to buy it.</p>${card(D.lib)}${D.fade&&D.fade.length?`<h2>Can be used for now</h2><p class="hw" style="margin:-4px 0 10px">Use these until they are finished, then phase them out.</p>${card(D.fade)}`:""}`}
 function settings(){
  const o=(k,l)=>`<button class="pill ${S.pref===k?"on":""}" data-p="${k}">${l}</button>`;
  const sel=m=>`<select data-c="${m}"><option value="light" ${S.custom[m]==="light"?"selected":""}>Light</option><option value="dark" ${S.custom[m]==="dark"?"selected":""}>Dark</option></select>`;
@@ -110,17 +140,25 @@ function render(fade){
  document.getElementById("nav").innerHTML=VIEWS.map(x=>`<button class="${x[0]===view?"on":""}" data-v="${x[0]}" aria-label="${x[2]}"><span>${x[1]}</span>${x[2]}</button>`).join("");
 }
 document.addEventListener("click",e=>{
- const t=e.target.closest("[data-v],[data-id],[data-b],[data-p],[data-tg],#addb,#reset");if(!t)return;
+ const t=e.target.closest("[data-v],[data-id],[data-b],[data-r],[data-a],[data-clr],[data-pa],[data-pk],[data-pc],[data-prs],[data-p],[data-tg],#addb,#reset");if(!t)return;
  if(t.dataset.v)return go(t.dataset.v);
  if(t.dataset.id){S.done[t.dataset.id]=!S.done[t.dataset.id]}
- else if(t.dataset.b){S.bought[t.dataset.b]=!S.bought[t.dataset.b]}
+ else if(t.dataset.pa!==undefined){S.plan=pend.fx.plan;pend=null}
+ else if(t.dataset.pk!==undefined){S.plan=pend.plan;pend=null}
+ else if(t.dataset.pc!==undefined){pend=null}
+ else if(t.dataset.prs!==undefined){S.plan=null;pend=null}
+ else if(t.dataset.r!==undefined){S.list.splice(+t.dataset.r,1)}
+ else if(t.dataset.a!==undefined){if(!S.list.some(x=>x.n===t.dataset.a))S.list.push({n:t.dataset.a,b:0})}
+ else if(t.dataset.clr!==undefined){S.list=S.list.filter(x=>!x.b)}
+ else if(t.dataset.b!==undefined){const x=S.list[+t.dataset.b];x.b=x.b?0:1}
  else if(t.dataset.p){S.pref=t.dataset.p}
  else if(t.dataset.tg){const m=modeOf(view);S.custom[m]=scheme(m)==="dark"?"light":"dark";S.pref="custom"}
- else if(t.id==="addb"){const i=document.getElementById("newi");if(i.value.trim())S.extra.push(i.value.trim())}
+ else if(t.id==="addb"){const i=document.getElementById("newi");const v=i.value.trim();if(v&&!S.list.some(x=>x.n===v))S.list.push({n:v,b:0})}
  else if(t.id==="reset"){S.done={}}
  save();render(false)});
 document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.classList.contains("row")){e.preventDefault();e.target.click()}});
-document.addEventListener("change",e=>{if(e.target.dataset.c){S.custom[e.target.dataset.c]=e.target.value;save();render(false)}});
+document.addEventListener("change",e=>{if(e.target.dataset.d!==undefined){const d=+e.target.dataset.d,np=[...(pend?pend.plan:getPlan())];np[d]=+e.target.value;const is=validate(np);if(is.length)pend={plan:np,issues:is,fx:fixPlan(np,d)};else{pend=null;S.plan=np}save();render(false);return}
+ if(e.target.dataset.c){S.custom[e.target.dataset.c]=e.target.value;save();render(false)}});
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>render(false));
 window.addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(h!==view&&VIEWS.some(v=>v[0]===h)){view=h;render(true)}});
 render(false);
